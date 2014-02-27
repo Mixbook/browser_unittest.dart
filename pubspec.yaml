@@ -1,0 +1,9 @@
+name: browser_unittest
+version: 0.1.0
+author: Dan Schultz <dan@mixbook.com>
+description: A set of tools for running and parsing headless unit tests with Content Shell.
+dependencies:
+  browser: any
+  hop: any
+  stack_trace: any
+  unittest: any
