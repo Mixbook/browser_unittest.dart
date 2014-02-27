@@ -13,8 +13,9 @@ Task createBrowserTestTask([Parser parser]) {
   return new Task(
       (context) => _run(context, parser),
       description: "Runs browser tests using content shell. Defaults to running 'test/test.html'",
-      argParser: new ArgParser()
-          ..addOption(_COMMAND_OPTION, help: "The command to execute Content Shell", defaultsTo: "Content Shell")
+      config: (ArgParser parser) {
+        parser.addOption(_COMMAND_OPTION, help: "The command to execute Content Shell", defaultsTo: "Content Shell");
+      }
   );
 }
 
