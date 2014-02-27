@@ -43,7 +43,7 @@ void main(List<String> args) {
 }
 ```
 
-Run the tests with Hop from your project's root directory.
+Run the tests with Hop from your project's root directory. By default, this will look for a test file inside your project's directory at `test/test.html`.
 
 ```
 $ dart tool/hop_runner.dart test
