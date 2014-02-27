@@ -20,7 +20,6 @@ library test;
 
 import 'package:unittest/unittest.dart';
 import 'package:unittest/html_config.dart';
-import 'package:browser_unittest/browser_unittest.dart';
 
 void main() {
   useHtmlConfiguration();

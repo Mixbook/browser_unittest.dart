@@ -3,7 +3,6 @@ version: 0.1.0
 author: Dan Schultz <dan@mixbook.com>
 description: A set of tools for running and parsing headless unit tests with Content Shell.
 dependencies:
-  browser: any
-  hop: any
-  stack_trace: any
-  unittest: any
+  hop: '>=0.27.0 <0.29.0'
+  stack_trace: '>=0.9.1'
+  unittest: '>=0.9.1'
