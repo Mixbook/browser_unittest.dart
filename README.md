@@ -12,7 +12,7 @@ If everything is setup correctly, you should be able to dump the render tree of 
 $ Content\ Shell --dump-render-tree google.com
 ```
 
-### Setup Your Test File
+### Setup Your Test Files
 In your Dart test file, make sure you're using the HTML configuration.
 
 ```
@@ -26,6 +26,24 @@ void main() {
   
   test("add", () => expect(1 + 1, equals(2)));
 }
+```
+
+In your test HTML file, you must also include `test_controller.js` from the unit test package. This file is used by the testing framework to notify the browser when the tests have completed.
+
+```
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <title>test</title>
+  </head>
+
+  <body>
+    <h1>Running tests...</h1>
+    <script type="application/dart" src="test.dart"></script>
+    <script type="text/javascript" src="packages/unittest/test_controller.js"></script>
+  </body>
+</html>
 ```
 
 ### Setup With Hop
