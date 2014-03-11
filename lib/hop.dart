@@ -9,9 +9,9 @@ import 'package:ansicolor/ansicolor.dart';
 
 const _COMMAND_OPTION = "content_shell";
 
-final colorizeAsError = new AnsiPen()..red();
-final colorizeAsFailure = new AnsiPen()..red();
-final colorizeAsSuccess = new AnsiPen()..green();
+final _colorizeAsError = new AnsiPen()..red();
+final _colorizeAsFailure = new AnsiPen()..red();
+final _colorizeAsSuccess = new AnsiPen()..green();
 
 Task createBrowserTestTask([Parser parser]) {
   parser = parser != null ? parser : htmlConfigParser;
@@ -41,13 +41,13 @@ Future _run(TaskContext context, Parser parser) {
 
           var summary = "Test results: ${passes.length} passed, ${failures.length} failed, ${errors.length} errored";
           if (errors.isNotEmpty || failures.isNotEmpty) {
-            context.fail(colorizeAsError(summary));
+            context.fail(_colorizeAsError(summary));
           } else {
-            context.info(colorizeAsSuccess(summary));
+            context.info(_colorizeAsSuccess(summary));
           }
         } else {
           context.severe(run.errorOutput);
-          context.fail(colorizeAsError("Tests did not complete"));
+          context.fail(_colorizeAsError("Tests did not complete"));
         }
       });
 }
