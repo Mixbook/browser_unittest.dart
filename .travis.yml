@@ -1,4 +1,6 @@
 language: ruby
+rvm:
+  - 1.9.3 # We don't care, but stops travis-lint from complaining
 cache:
   apt: true
   directories:
