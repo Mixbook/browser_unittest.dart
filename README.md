@@ -1,4 +1,4 @@
-# Headless Browser Unit Tests
+# Headless Browser Unit Tests [![Build Status](https://travis-ci.org/Mixbook/browser_unittest.dart.svg?branch=master)](https://travis-ci.org/Mixbook/browser_unittest.dart)
 This package provides tools for running and parsing headless browser unit tests with Content Shell.
 
 ## Usage
