@@ -1,5 +1,5 @@
 name: browser_unittest
-version: 0.3.0+1
+version: 0.4.0
 author: Dan Schultz <dan@mixbook.com>
 description: A set of tools for running and parsing headless unit tests with Content Shell.
 homepage: https://github.com/Mixbook/browser_unittest.dart
